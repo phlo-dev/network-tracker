@@ -4,6 +4,7 @@ package br.com.nettracker
 
 import android.app.Application
 import br.com.nettracker.di.moduleList
+import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
 class MainApplication : Application() {
@@ -13,6 +14,7 @@ class MainApplication : Application() {
 
         startKoin {
             modules(moduleList)
+            androidContext(this@MainApplication)
         }
     }
 }
