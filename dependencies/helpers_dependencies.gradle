@@ -1,0 +1,30 @@
+def work_version = "2.5.0"
+def nav_version = "2.3.3"
+
+dependencies {
+    implementation "androidx.work:work-runtime-ktx:$work_version"
+    // optional - Multiprocess support
+    implementation "androidx.work:work-multiprocess:$work_version"
+    implementation "org.koin:koin-core:$koin_version"
+
+    androidTestImplementation "androidx.work:work-testing:$work_version"
+
+    testImplementation "org.koin:koin-test:$koin_version"
+
+
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+
+    //Navigation and jetpack
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Testing Navigation
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    // Jetpack Compose Integration
+    implementation "androidx.navigation:navigation-compose:1.0.0-alpha09"
+
+}
